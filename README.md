@@ -1,9 +1,9 @@
-## Hacker News sample application
+# Hacker News sample application
 
 ![ссылка на фото](hacker-1.jpg)
 1. First we need to copy the project
 ```
-git clone origin ****
+git clone origin https://github.com/Beki95/Hacker_News.git
 ```
 ___
 2. Step 2 you need to create a file in the root of the project .an example is the ___env_example___ file
