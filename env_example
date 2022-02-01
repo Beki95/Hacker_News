@@ -1,0 +1,6 @@
+SECRET_KEY=*******
+
+DEBUG=False
+POSTGRES_PASSWORD=DevelopsToday2022
+POSTGRES_DB=DevelopsDB
+POSTGRES_USER=Develops
