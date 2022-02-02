@@ -148,6 +148,14 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Celery
+CELERY_BROKER_URL = "redis://redis:6379/1"
+CELERY_TIMEZONE = 'Asia/Bishkek'
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_RESULT_BACKEND = "redis://redis:6379/1"
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/

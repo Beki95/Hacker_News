@@ -13,14 +13,39 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data/
 
+  redis:
+    image: redis
+    restart: always
+    container_name: redis
+
+  celery:
+    build: .
+    container_name: celery
+    command: celery -A Hacker_News worker -l info
+    volumes:
+      - ./data/celery:/app/
+    depends_on:
+      - redis
+      - web
+
+  celery-beat:
+    build: .
+    command: celery -A Hacker_News beat -l info
+    volumes:
+      - ./:/app/
+    depends_on:
+      - redis
+
   web:
     build: .
     depends_on:
       - db
+      - redis
     container_name: web
     env_file:
       - ./.env
     volumes:
+      - .:/app
       - ./data/static/:/app/data/static/
     command: sh -c "./manage.py collectstatic --no-input &&
                     ./manage.py migrate &&

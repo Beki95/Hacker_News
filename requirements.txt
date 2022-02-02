@@ -8,3 +8,5 @@ djangorestframework
 PyJWT==2.3.0
 djangorestframework-simplejwt==4.8.0
 gunicorn
+celery
+redis
