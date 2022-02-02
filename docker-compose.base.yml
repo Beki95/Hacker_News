@@ -23,7 +23,7 @@ services:
     container_name: celery
     command: celery -A Hacker_News worker -l info
     volumes:
-      - ./data/celery:/usr/src/app/
+      - .:/app/
     depends_on:
       - redis
       - web
@@ -32,7 +32,7 @@ services:
     build: .
     command: celery -A Hacker_News beat -l info
     volumes:
-      - ./:/usr/src/app/
+      - .:/app/
     depends_on:
       - redis
 
