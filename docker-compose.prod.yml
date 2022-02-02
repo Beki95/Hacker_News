@@ -45,7 +45,7 @@ services:
     env_file:
       - ./.env
     volumes:
-      - .:/app
+      - .:/app/
       - ./data/static/:/app/data/static/
     command: sh -c "./manage.py collectstatic --no-input &&
                     ./manage.py migrate &&
