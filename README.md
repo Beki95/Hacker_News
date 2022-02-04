@@ -23,6 +23,6 @@ docker-compose -f docker-compose.base.yml up
 ### to see the result, go to http://localhost/
 
 <p align="right">
-    <a href="https://imanaliev.postman.co/workspace/Team-Workspace~0f69d200-e47e-4099-8e03-80db1c1f696f/collection/15331219-8b43ce72-7bf7-4aa9-bcb5-1558c6812c88"><img src="https://run.pstmn.io/button.svg"></a>
+    <a href="https://documenter.getpostman.com/view/15331219/UVeGpQzd"><img src="https://run.pstmn.io/button.svg"></a>
 </p>
 
